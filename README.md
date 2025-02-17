@@ -36,13 +36,58 @@ https://arxiv.org/abs/2502.01411)
 - [ ] Models
 - [ ] Testing
 - [ ] Training
-- [ ] [Results](#Results)
+- [x] [Results](#Results)
 - [x] [Citation](#Citation)
 - [ ] [Acknowledgements](#Acknowledgements)
 
 ## <a name="results"></a>🔎 Results
 
-[TBD]
+The model **OSDHuman** achieved state-of-the-art performance on both the datasets **PERSONA-Val** and **PERSONA-Test**. Detailed results can be found in the paper.
+
+<details>
+<summary>&ensp;Quantitative Comparisons (click to expand) </summary>
+<li> Results in Table 2 on synthetic PERSONA-Val and real-world PERSONA-Test datasets from the main paper. 
+<p align="center">
+<img src="images/table2-main.png" >
+</p>
+</li>
+</details>
+<details open>
+<summary>&ensp;Visual Comparisons (click to expand) </summary>
+<li> Results in Figure 8 on real-world PERSONA-Test dataset from the main paper.
+<p align="center">
+<img src="images/figure8-main.png" >
+</p>
+</li>
+<li> Results in Figure 9 on synthetic PERSONA-Val dataset from the main paper.
+<p align="center">
+<img src="images/figure9-main.png" >
+</p>
+</li>
+</details>
+<details>
+<summary style="margin-left: 2rem;">&ensp;More Comparisons on real-world PERSONA-Test dataset... </summary>
+<li style="margin-left: 2rem;"> Results in Figure 3, 4 from supplemental material.
+<p align="center">
+<img src="images/figure3-supp.png" >
+</p>
+<p align="center">
+<img src="images/figure4-supp.png" >
+</p>
+</li>
+</details>
+<details>
+<summary style="margin-left: 2rem;">&ensp;More Comparisons on synthetic PERSONA-Val dataset... </summary>
+<li style="margin-left: 2rem;"> Results in Figure 5, 6 from supplemental material.
+<p align="center">
+<img src="images/figure5-supp.png" >
+</p>
+<p align="center">
+<img src="images/figure6-supp.png" >
+</p>
+</li>
+</details>
+
 
 ## <a name="citation"></a>📎 Citation
 
