@@ -1,18 +1,50 @@
-# Human Body Restoration with One-Step Diffusion Model and A New Benchmark
+<h1 align="center">
+  Human Body Restoration with <br>
+  One-Step Diffusion Model and A New Benchmark
+</h1>
 
-[Jue Gong](https://github.com/gobunu), [Jingkai Wang](https://github.com/jkwang28), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yulun Zhang](http://yulunzhang.com/), and [Xiaokang Yang](https://scholar.google.com/citations?user=yDEavdMAAAAJ), "A new benchmark and the first one-step diffusion model for human body restoration.", 2025
 
-[![arXiv](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg)](
-https://arxiv.org/abs/2502.01411)
-[![supp](https://img.shields.io/badge/Supplementary_material-Paper-orange.svg)](https://github.com/gobunu/OSDHuman/releases/download/v1/supp.pdf)
-[![releases](https://img.shields.io/github/downloads/gobunu/OSDHuman/total.svg)](https://github.com/gobunu/OSDHuman/releases)
-[![visitors](https://visitor-badge.laobi.icu/badge?page_id=gobunu.OSDHuman&right_color=violet)](https://github.com/gobunu/OSDHuman)
-[![GitHub Stars](https://img.shields.io/github/stars/gobunu/OSDHuman?style=social)](https://github.com/gobunu/OSDHuman)
+<p align="center">
+🚩 <strong>Accepted by ICML2025</strong>
+</p>
+
+<p align="center">
+<a href="https://github.com/gobunu">Jue Gong</a>, 
+<a href="https://github.com/jkwang28">Jingkai Wang</a>, 
+<a href="https://zhengchen1999.github.io/">Zheng Chen</a>, 
+Xing Liu, Hong Gu, 
+<a href="http://yulunzhang.com/">Yulun Zhang</a>, 
+<a href="https://scholar.google.com/citations?user=yDEavdMAAAAJ">Xiaokang Yang</a>
+</p>
+
+<p align="center">
+"A new benchmark and the first one-step diffusion model for human body restoration.", 2025
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2502.01411">
+    <img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg">
+  </a>
+  <a href="https://github.com/gobunu/OSDHuman/releases/download/v1/supp.pdf">
+    <img src="https://img.shields.io/badge/Supplementary_material-Paper-orange.svg">
+  </a>
+  <a href="https://github.com/gobunu/OSDHuman/releases">
+    <img src="https://img.shields.io/github/downloads/gobunu/OSDHuman/total.svg">
+  </a>
+  <a href="https://github.com/gobunu/OSDHuman">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=gobunu.OSDHuman&right_color=violet">
+  </a>
+  <a href="https://github.com/gobunu/OSDHuman">
+    <img src="https://img.shields.io/github/stars/gobunu/OSDHuman?style=social">
+  </a>
+</p>
+
 
 #### 🔥🔥🔥 News
 
 - **2025-2-5:** This repo is released.
-
+- **2025-05-01**: 🎉 Congratulations! OSDHuman has been accepted to **ICML 2025**.
+- **2025-05-04**: 🧪 Released the test and validation sets proposed in the paper.
 ---
 
 > **Abstract:** Human body restoration, as a specific application of image restoration, is widely applied in practice and plays a vital role across diverse fields. However, thorough research remains difficult, particularly due to the lack of benchmark datasets. In this study, we propose a high-quality dataset automated cropping and filtering (HQ-ACF) pipeline. This pipeline leverages existing object detection datasets and other unlabeled images to automatically crop and filter high-quality human images. Using this pipeline, we constructed a person-based restoration with sophisticated objects and natural activities (PERSONA) dataset, which includes training, validation, and test sets. The dataset significantly surpasses other human-related datasets in both quality and content richness. Finally, we propose OSDHuman, a novel one-step diffusion model for human body restoration. Specifically, we propose a high-fidelity image embedder (HFIE) as the prompt generator to better guide the model with low-quality human image information, effectively avoiding misleading prompts. Experimental results show that OSDHuman outperforms existing methods in both visual quality and quantitative metrics. 
@@ -32,13 +64,24 @@ https://arxiv.org/abs/2502.01411)
 
 ## 🔗 Contents
 
-- [ ] PERSONA Dataset
+- [ ] PERSONA Training Set
+- [x] [PERSONA Test and Validation Set](#Test_Validation_Set)
 - [ ] Models
 - [ ] Testing
 - [ ] Training
 - [x] [Results](#Results)
 - [x] [Citation](#Citation)
 - [ ] [Acknowledgements](#Acknowledgements)
+
+## <a name="Test_Validation_Set"></a>🎭 PERSONA Test and Validation Set
+
+We provide three sets for evaluation, including both high- and low-quality validation images, and a real-world test set.
+
+| Dataset           | Description                             | Download Link |
+|------------------|-----------------------------------------|---------------|
+| PERSONA-Val HQ   | High-quality validation set             | [Google Drive](https://drive.google.com/file/d/1JaUzyDBJHytl3MfFBdcGAaO7uYDfP3vS/view?usp=drive_link) |
+| PERSONA-Val LQ   | Low-quality (degraded) validation set   | [Google Drive](https://drive.google.com/file/d/1qzJETavxMFxUDyimYxg4Ob5GmAAHmuMG/view?usp=drive_link) |
+| PERSONA-Test     | Real-world test set                     | [Google Drive](https://drive.google.com/file/d/1n_rywHB2apB9kWgZSRdnzMxQsJKWIEMR/view?usp=drive_link) |
 
 ## <a name="results"></a>🔎 Results
 
