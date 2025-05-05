@@ -139,7 +139,7 @@ If you find the code helpful in your research or work, please cite the following
 ```
 @inproceedings{gong2025osdhuman,
     title={Human Body Restoration with One-Step Diffusion Model and A New Benchmark},
-    author={Jue Gong and Jingkai Wang and Zheng Chen and Xing Liu and Hong Gu and Yulun Zhang and Xiaokang Yang},
+    author={Gong, Jue and Wang, Jingkai and Chen, Zheng and Liu, Xing and Gu, Hong and Zhang, Yulun and Yang, Xiaokang},
     booktitle={ICML},
     year={2025}
 }
