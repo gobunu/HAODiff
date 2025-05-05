@@ -42,7 +42,7 @@ Xing Liu, Hong Gu,
 
 #### 🔥🔥🔥 News
 
-- **2025-2-5:** This repo is released.
+- **2025-02-05:** This repo is released.
 - **2025-05-01**: 🎉 Congratulations! OSDHuman has been accepted to **ICML 2025**.
 - **2025-05-04**: 🧪 Released the test and validation sets proposed in the paper.
 ---
@@ -137,10 +137,10 @@ The model **OSDHuman** achieved state-of-the-art performance on both the dataset
 If you find the code helpful in your research or work, please cite the following paper(s).
 
 ```
-@article{gong2025osdhuman,
+@inproceedings{gong2025osdhuman,
     title={Human Body Restoration with One-Step Diffusion Model and A New Benchmark},
     author={Jue Gong and Jingkai Wang and Zheng Chen and Xing Liu and Hong Gu and Yulun Zhang and Xiaokang Yang},
-    journal={arXiv preprint arXiv:2502.01411},
+    booktitle={ICML},
     year={2025}
 }
 ```
