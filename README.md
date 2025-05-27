@@ -22,7 +22,7 @@ Xing Liu, Hong Gu,
   <a href="https://arxiv.org/abs/2505.19742">
     <img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg">
   </a>
-  <a href="https://github.com/gobunu/HAODiff/releases/download/v1/supp.pdf">
+  <a href="https://github.com/gobunu/HAODiff/releases/download/Paper/supp.pdf">
     <img src="https://img.shields.io/badge/Supplementary_material-Paper-orange.svg">
   </a>
   <a href="https://github.com/gobunu/HAODiff/releases">
