@@ -44,13 +44,43 @@ Xing Liu, Hong Gu,
 
 > **Abstract:** Human-centered images often suffer from severe generic degradation during transmission and are prone to human motion blur (HMB), making restoration challenging. Existing research lacks sufficient focus on these issues, as both problems often coexist in practice. To address this, we design a degradation pipeline that simulates the coexistence of HMB and generic noise, generating synthetic degraded data to train our proposed HAODiff, a human-aware one-step diffusion. Specifically, we propose a triple-branch dual-prompt guidance (DPG), which leverages high-quality images, residual noise (LQ minus HQ), and HMB segmentation masks as training targets. It produces a positive-negative prompt pair for classifier-free guidance (CFG) in a single diffusion step. The resulting adaptive dual prompts let HAODiff exploit CFG more effectively, boosting robustness against diverse degradations. For fair evaluation, we introduce MPII-Test, a benchmark rich in combined noise and HMB cases. Extensive experiments show that our HAODiff surpasses existing state-of-the-art (SOTA) methods in terms of both quantitative metrics and visual quality on synthetic and real-world datasets, including our introduced MPII-Test.
 
-![](images/HAODiff_pipeline.png)
+<p align="center">
+  <img src="images/HAODiff_pipeline.png" alt="HAODiff pipeline" style="width:85%;"/><br>
+  <b>Figure 2:</b> Degradation pipeline overview.
+</p>
 
-![](images/HAODiff_model.png)
+<p align="center">
+  <img src="images/HAODiff_model.png" alt="HAODiff model architecture" style="width:85%;"/><br>
+  <b>Figure 3:</b> Model structure of our HAODiff.
+</p>
 
 ---
+<div align="center">
 
-[<img src="images/val_1.png" height="200"/>](https://imgsli.com/MzgzMjE2) [<img src="images/val_2.png" height="200"/>](https://imgsli.com/MzgzMjE3)[<img src="images/mpii_1.png" height="200"/>](https://imgsli.com/MzgzMjEw) [<img src="images/mpii_2.png" height="200"/>](https://imgsli.com/MzgzMjEx)[<img src="images/test_1.png" height="200"/>](https://imgsli.com/MzgzMjE0) [<img src="images/test_2.png" height="200"/>](https://imgsli.com/MzgzMjE1)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://imgsli.com/MzgzMjE2"><img src="images/val_1.png" height="200"/></a><br>
+      <a href="https://imgsli.com/MzgzMjE3"><img src="images/val_2.png" height="200"/></a><br>
+      <b>val</b>
+    </td>
+    <td align="center">
+      <a href="https://imgsli.com/MzgzMjEw"><img src="images/mpii_1.png" height="200"/></a><br>
+      <a href="https://imgsli.com/MzgzMjEx"><img src="images/mpii_2.png" height="200"/></a><br>
+      <b>mpii</b>
+    </td>
+    <td align="center">
+      <a href="https://imgsli.com/MzgzMjE0"><img src="images/test_1.png" height="200"/></a><br>
+      <a href="https://imgsli.com/MzgzMjE1"><img src="images/test_2.png" height="200"/></a><br>
+      <b>test</b>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+
+
 
 ---
 
@@ -85,7 +115,7 @@ The model **HAODiff** achieved state-of-the-art performance on both the datasets
 </p>
 </li>
 </details>
-<details open>
+<details>
 <summary>&ensp;Visual Comparisons (click to expand) </summary>
 <li> Results in Figure 5 on synthetic PERSONA-Val dataset from the main paper.
 <p align="center">
@@ -98,7 +128,7 @@ The model **HAODiff** achieved state-of-the-art performance on both the datasets
 </p>
 </li>
 </details>
-<details>
+<details open>
 <summary style="margin-left: 2rem;">&ensp;More Comparisons on fabric patterns and textures... </summary>
 <li style="margin-left: 2rem;"> Results in Figure 4 from supplemental material.
 <p align="center">
@@ -118,14 +148,20 @@ The model **HAODiff** achieved state-of-the-art performance on both the datasets
 </li>
 </details>
 <details>
-<summary style="margin-left: 2rem;">&ensp;More Comparisons on real-world PERSONA-Test and MPII-Test datasets... </summary>
-<li style="margin-left: 2rem;"> Results in Figure 7, 8, 9, and 10 from supplemental material.
+<summary style="margin-left: 2rem;">&ensp;More Comparisons on real-world PERSONA-Test dataset... </summary>
+<li style="margin-left: 2rem;"> Results in Figure 7, 8 from supplemental material.
 <p align="center">
 <img src="images/fig7-supp.png" >
 </p>
 <p align="center">
 <img src="images/fig8-supp.png" >
 </p>
+</li>
+</details>
+
+<details>
+<summary style="margin-left: 2rem;">&ensp;More Comparisons on real-world MPII-Test dataset... </summary>
+<li style="margin-left: 2rem;"> Results in Figure 9, 10 from supplemental material.
 <p align="center">
 <img src="images/fig9-supp.png" >
 </p>
@@ -134,6 +170,7 @@ The model **HAODiff** achieved state-of-the-art performance on both the datasets
 </p>
 </li>
 </details>
+
 <details>
 <summary style="margin-left: 2rem;">&ensp;More Comparisons on challenge tasks... </summary>
 <li style="margin-left: 2rem;"> Results in Figure 11, 12 from supplemental material.
