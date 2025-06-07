@@ -62,17 +62,17 @@ Xing Liu, Hong Gu,
     <td align="center">
       <a href="https://imgsli.com/MzgzMjE2"><img src="images/val_1.png" height="200"/></a><br>
       <a href="https://imgsli.com/MzgzMjE3"><img src="images/val_2.png" height="200"/></a><br>
-      <b>val</b>
+      <b>PERSONA-Val</b>
     </td>
     <td align="center">
       <a href="https://imgsli.com/MzgzMjEw"><img src="images/mpii_1.png" height="200"/></a><br>
       <a href="https://imgsli.com/MzgzMjEx"><img src="images/mpii_2.png" height="200"/></a><br>
-      <b>mpii</b>
+      <b>MPII-Test</b>
     </td>
     <td align="center">
       <a href="https://imgsli.com/MzgzMjE0"><img src="images/test_1.png" height="200"/></a><br>
       <a href="https://imgsli.com/MzgzMjE1"><img src="images/test_2.png" height="200"/></a><br>
-      <b>test</b>
+      <b>PERSONA-Test</b>
     </td>
   </tr>
 </table>
