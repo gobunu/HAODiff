@@ -115,21 +115,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Touch events for mobile
-    element.addEventListener('touchstart', (e) => {
-      isActive = true;
-      updateSlider(e.touches[0].clientX);
-      e.preventDefault();
-    });
+    // On touch devices, make dragging start only from the handle area to
+    // leave more free space around for normal scrolling.
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (isTouch) {
+      const handle = element.querySelector('.slider-line');
+      handle.addEventListener('touchstart', (e) => {
+        isActive = true;
+        updateSlider(e.touches[0].clientX);
+        e.preventDefault();
+      }, { passive: false });
 
-    document.addEventListener('touchmove', (e) => {
-      if (!isActive) return;
-      updateSlider(e.touches[0].clientX);
-      e.preventDefault();
-    }, { passive: false });
+      document.addEventListener('touchmove', (e) => {
+        if (!isActive) return;
+        updateSlider(e.touches[0].clientX);
+        e.preventDefault();
+      }, { passive: false });
 
-    document.addEventListener('touchend', () => {
-      isActive = false;
-    });
+      document.addEventListener('touchend', () => {
+        isActive = false;
+      });
+    } else {
+      element.addEventListener('touchstart', (e) => {
+        isActive = true;
+        updateSlider(e.touches[0].clientX);
+        e.preventDefault();
+      }, { passive: false });
+
+      document.addEventListener('touchmove', (e) => {
+        if (!isActive) return;
+        updateSlider(e.touches[0].clientX);
+        e.preventDefault();
+      }, { passive: false });
+
+      document.addEventListener('touchend', () => {
+        isActive = false;
+      });
+    }
 
     // Click to move slider
     element.addEventListener('click', (e) => {

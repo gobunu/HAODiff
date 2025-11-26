@@ -330,6 +330,7 @@ img.loaded {
     width: 100%;
     max-width: 320px;
     height: 220px;
+    margin: 0 auto 1.5rem auto;
   }
 }
 
