@@ -330,7 +330,7 @@ img.loaded {
     width: 100%;
     max-width: 320px;
     height: 220px;
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto 2.5rem auto;
   }
 }
 
@@ -522,6 +522,11 @@ body.dark-theme .content li,
 body.dark-theme .publication-authors,
 body.dark-theme .publication-institutions {
   color: var(--text-color);
+}
+
+/* Ensure figure captions are light in dark mode */
+body.dark-theme figure figcaption {
+  color: var(--text-color) !important;
 }
 
 body.dark-theme pre,
