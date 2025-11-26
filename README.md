@@ -1,8 +1,8 @@
-# Website for OSDFace: One-Step Diffusion Model for Face Restoration
+# Website for HAODiff: Human-Aware One-Step Diffusion via Dual-Prompt Guidance 
 
-Page: https://jkwang28.github.io/OSDFace/
+Page: https://gobunu.github.io/HAODiff/
 
-Repo: https://github.com/jkwang28/OSDFace
+Repo: https://github.com/gobunu/HAODiff/
 
 ## Acknowledgments
 This page was built using the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) which was adopted from the [Nerfies](https://nerfies.github.io) project page.
