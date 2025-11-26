@@ -328,8 +328,8 @@ img.loaded {
 @media screen and (max-width: 768px) {
   .image-comparer {
     width: 100%;
-    max-width: 300px;
-    height: 300px;
+    max-width: 320px;
+    height: 220px;
   }
 }
 
@@ -492,6 +492,12 @@ body.dark-theme .button.is-link {
 
   .lightbox-next {
     right: 8px;
+  }
+
+  /* Hide zoom hint under very small screens to avoid overflow */
+  .lightbox-zoom-hint {
+    font-size: 12px;
+    bottom: -22px;
   }
 }
 

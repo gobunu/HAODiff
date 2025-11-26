@@ -404,6 +404,9 @@ document.addEventListener('DOMContentLoaded', function () {
 // Initial auto-swipe for image comparers
 document.addEventListener('DOMContentLoaded', function () {
   const comparers = document.querySelectorAll('.image-comparer');
+  // Skip auto animation on small screens / touch-centric devices
+  const isSmallScreen = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+  if (isSmallScreen) return;
   comparers.forEach(function (el, idx) {
     const before = el.querySelector('.image-before');
     const sliderLine = el.querySelector('.slider-line');
