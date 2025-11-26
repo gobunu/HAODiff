@@ -2,6 +2,27 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+/* Top hero particle canvas */
+#hero-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero.has-particles {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.has-particles .hero-body,
+.hero.has-particles .container {
+  position: relative;
+  z-index: 1;
+}
+
 
 .footer .icon-link {
   font-size: 25px;
@@ -310,4 +331,198 @@ img.loaded {
     max-width: 300px;
     height: 300px;
   }
+}
+
+/* Light/Dark theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --section-light-bg: #f5f5f5;
+  --accent-color: #3273dc;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-theme {
+  --bg-color: #0b1120;
+  --text-color: #e5e7eb;
+  --section-light-bg: #111827;
+  --accent-color: #38bdf8;
+}
+
+body.dark-theme .hero,
+body.dark-theme .section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-theme .hero.is-light,
+body.dark-theme .section.hero.is-light {
+  background-color: var(--section-light-bg);
+}
+
+body.dark-theme .title,
+body.dark-theme .subtitle,
+body.dark-theme .content {
+  color: var(--text-color);
+}
+
+/* Ensure specific section titles (e.g., Human Body Restoration, Method) are light in dark mode */
+body.dark-theme h2.title,
+body.dark-theme h3.title,
+body.dark-theme h1.title {
+  color: var(--text-color) !important;
+}
+
+body.dark-theme .footer {
+  background-color: #020617;
+  color: var(--text-color);
+}
+
+body.dark-theme .button.is-primary,
+body.dark-theme .button.is-link {
+  background-color: var(--accent-color);
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 200;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  z-index: 150;
+  transition: width 0.1s ease-out;
+}
+
+/* Image lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.lightbox-image-wrapper {
+  transform-origin: center center;
+  transition: transform 0.1s ease-out;
+  cursor: grab;
+}
+
+.lightbox-zoom-hint {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #e5e7eb;
+  opacity: 0.7;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(15,23,42,0.85);
+  color: #f9fafb;
+  border: none;
+  border-radius: 999px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox-close {
+  top: 16px;
+  right: 16px;
+  transform: none;
+}
+
+.lightbox-prev {
+  left: -52px;
+}
+
+.lightbox-next {
+  right: -52px;
+}
+
+@media screen and (max-width: 768px) {
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+}
+
+/* Cursor trail - tech line */
+#cursor-trail {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 300;
+}
+
+#cursor-trail path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Dark theme fixes for texts and BibTeX block */
+body.dark-theme .content p,
+body.dark-theme .content li,
+body.dark-theme .publication-authors,
+body.dark-theme .publication-institutions {
+  color: var(--text-color);
+}
+
+body.dark-theme pre,
+body.dark-theme code {
+  background-color: #020617 !important;
+  color: #e5e7eb !important;
+}
+
+body.dark-theme #bibtex-block pre {
+  background-color: #020617 !important;
 }

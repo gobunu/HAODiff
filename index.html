@@ -46,6 +46,14 @@
 
 <body>
 
+  <div id="scroll-progress"></div>
+
+  <button id="theme-toggle" class="button is-small is-light">
+    <span class="icon"><i class="fas fa-moon"></i></span>
+  </button>
+
+  <svg id="cursor-trail"></svg>
+
   <div id="loading" style="display: none;">
     <div class="loading-spinner"></div>
   </div>
@@ -56,7 +64,8 @@
     </span>
   </button>
 
-  <section class="hero">
+  <section class="hero has-particles">
+    <canvas id="hero-particles"></canvas>
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
