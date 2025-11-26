@@ -328,9 +328,9 @@ img.loaded {
 @media screen and (max-width: 768px) {
   .image-comparer {
     width: 100%;
-    max-width: 320px;
-    height: 220px;
-    margin: 0 auto 2.5rem auto;
+    max-width: 280px;           /* 稍微缩一点 */
+    height: 280px;              /* 保持正方形 */
+    margin: 0 auto 2.5rem auto; /* 下方仍然留空白区域 */
   }
 }
 
