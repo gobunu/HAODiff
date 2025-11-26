@@ -330,7 +330,7 @@ img.loaded {
     width: 100%;
     max-width: 280px;           /* 稍微缩一点 */
     height: 280px;              /* 保持正方形 */
-    margin: 0 auto 2.5rem auto; /* 下方仍然留空白区域 */
+    margin: 0 auto 0.5rem auto; /* 下方仍然留空白区域 */
   }
 }
 
