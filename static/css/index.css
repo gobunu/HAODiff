@@ -14,7 +14,7 @@ body {
 /* 顶部 Logo 区域（标题上方，与标题一起下移） */
 .haodiff-topbar {
   margin-top: 0;        /* 不再用它来做全局顶部留白 */
-  margin-bottom: 1rem;  /* 只控制 Logo 与标题之间的间距 */
+  margin-bottom: 1.5rem;  /* 只控制 Logo 与标题之间的间距 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,7 @@ body.dark-theme .haodiff-wordmark {
 
 /* 控制从页面顶部到 Logo+标题 的整体距离 */
 .hero.has-particles .hero-body {
-  padding-top: 2rem;  /* 想整体更靠下就调大这个值 */
+  padding-top: 1rem;  /* 想整体更靠下就调大这个值 */
 }
 
 /* 顶部 Logo+艺术字在移动端的适配，避免文字溢出 */
