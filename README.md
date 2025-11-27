@@ -19,6 +19,9 @@ Xing Liu, Hong Gu,
 </p>
 
 <p align="center">
+  <a href="https://gobunu.github.io/HAODiff/">
+    <img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg">
+  </a>
   <a href="https://arxiv.org/abs/2505.19742">
     <img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg">
   </a>
@@ -40,6 +43,8 @@ Xing Liu, Hong Gu,
 #### 🔥🔥🔥 News
 
 - **2025-05-27:** This repo is released.
+- **2025-09-17**: 🎉 Congratulations! HAODiff has been accepted to **NeurIPS 2025**.
+- **2025-11-27**: 🧪 Released the test set **MPII-Test** proposed in the paper.
 ---
 
 > **Abstract:** Human-centered images often suffer from severe generic degradation during transmission and are prone to human motion blur (HMB), making restoration challenging. Existing research lacks sufficient focus on these issues, as both problems often coexist in practice. To address this, we design a degradation pipeline that simulates the coexistence of HMB and generic noise, generating synthetic degraded data to train our proposed HAODiff, a human-aware one-step diffusion. Specifically, we propose a triple-branch dual-prompt guidance (DPG), which leverages high-quality images, residual noise (LQ minus HQ), and HMB segmentation masks as training targets. It produces a positive-negative prompt pair for classifier-free guidance (CFG) in a single diffusion step. The resulting adaptive dual prompts let HAODiff exploit CFG more effectively, boosting robustness against diverse degradations. For fair evaluation, we introduce MPII-Test, a benchmark rich in combined noise and HMB cases. Extensive experiments show that our HAODiff surpasses existing state-of-the-art (SOTA) methods in terms of both quantitative metrics and visual quality on synthetic and real-world datasets, including our introduced MPII-Test.
@@ -91,11 +96,17 @@ Xing Liu, Hong Gu,
 ## 🔗 Contents
 
 - [ ] Models
-- [ ] Testing
+- [x] [Test Set](#testset)
 - [ ] Training
-- [x] [Results](#Results)
-- [x] [Citation](#Citation)
-- [ ] [Acknowledgements](#Acknowledgements)
+- [x] [Results](#results)
+- [x] [Citation](#citation)
+- [ ] [Acknowledgements](#acknowledgements)
+
+## <a name="testset"></a>🔎 Test Set
+| Dataset           | Description                             | Download Link |
+|------------------|-----------------------------------------|---------------|
+| MPII-Test   | Real-world test set              | [Google Drive](https://drive.google.com/file/d/1nu3ihQfJjTG1gLlVzEe9RZhQ5dy4E6Rl/view?usp=sharing) |
+
 
 ## <a name="results"></a>🔎 Results
 
@@ -186,16 +197,17 @@ The model **HAODiff** achieved state-of-the-art performance on both the datasets
 
 ## <a name="citation"></a>📎 Citation
 
-If you find the code helpful in your research or work, please cite the following paper(s).
+If you find the code helpful in your research or work, please cite the following paper.
 
-```
-@article{gong2025haodiff,
-    title={{HAODiff: Human-Aware One-Step Diffusion via Dual-Prompt Guidance}},
-    author={Gong, Jue and Yang, Tingyu and Wang, Jingkai and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun and Yang, Xiaokang},
-    journal={arXiv preprint 2505.19742},
-    year={2025}
+```bibtex
+@inproceedings{gong2025haodiff,
+  title={{HAODiff}: Human-Aware One-Step Diffusion via Dual-Prompt Guidance},
+  author={Gong, Jue and Yang, Tingyu and Wang, Jingkai and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun and Yang, Xiaokang},
+  booktitle={NeurIPS},
+  year={2025}
 }
 ```
+
 
 ## <a name="acknowledgements"></a>💡 Acknowledgements
 
