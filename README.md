@@ -1,3 +1,8 @@
+<p align="center">
+    <img src="images/LOGO-HAODiff-combined.png" width="400">
+</p>
+
+
 <h1 align="center">
   HAODiff: Human-Aware One-Step Diffusion <br>
   via Dual-Prompt Guidance 
