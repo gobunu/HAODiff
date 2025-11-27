@@ -14,7 +14,7 @@ body {
 /* 顶部 Logo 区域（标题上方，与标题一起下移） */
 .haodiff-topbar {
   margin-top: 0;        /* 不再用它来做全局顶部留白 */
-  margin-bottom: 2rem;  /* 只控制 Logo 与标题之间的间距 */
+  margin-bottom: 1rem;  /* 只控制 Logo 与标题之间的间距 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,8 +45,8 @@ body.dark-theme .haodiff-logo-night {
 
 .haodiff-wordmark {
   font-family: 'HAODiffZapfino', 'Noto Sans', sans-serif;
-  font-size: 2.4rem;   /* 文字大小在这里调整 */
-  letter-spacing: 0.18rem; /* 字间距在这里调整 */
+  font-size: clamp(1.6rem, 3vw, 2.4rem);   /* 随视口宽度变化的字号 */
+  letter-spacing: 0.18rem; /* PC 端默认字间距 */
   font-weight: 700;
   color: #215f9b;
 }
@@ -78,7 +78,42 @@ body.dark-theme .haodiff-wordmark {
 
 /* 控制从页面顶部到 Logo+标题 的整体距离 */
 .hero.has-particles .hero-body {
-  padding-top: 5rem;  /* 想整体更靠下就调大这个值 */
+  padding-top: 2rem;  /* 想整体更靠下就调大这个值 */
+}
+
+/* 顶部 Logo+艺术字在移动端的适配，避免文字溢出 */
+@media screen and (max-width: 768px) {
+  .haodiff-topbar-inner {
+    gap: 8px;                 /* 缩小文字与 logo 的水平间距 */
+    max-width: 90vw;          /* 整块不超过视口宽度的 90% */
+  }
+
+  .haodiff-logo {
+    height: 96px;             /* 手机端缩小 logo 高度 */
+    transform: translateY(-3px);
+  }
+
+  .haodiff-wordmark {
+    letter-spacing: 0.12rem;  /* 移动端略微收紧字间距 */
+  }
+}
+
+/* 特别窄的手机上改为纵向布局，进一步防止溢出 */
+@media screen and (max-width: 480px) {
+  .haodiff-topbar-inner {
+    flex-direction: column;   /* logo 在上，文字在下 */
+    align-items: center;
+  }
+
+  .haodiff-logo {
+    height: 80px;             /* 再缩小一点 logo */
+    transform: translateY(0); /* 纵向时不需要向上偏移 */
+  }
+
+  .haodiff-wordmark {
+    text-align: center;
+    letter-spacing: 0.1rem;   /* 竖排时再略微收紧 */
+  }
 }
 
 
