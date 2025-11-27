@@ -78,7 +78,7 @@ body.dark-theme .haodiff-wordmark {
 
 /* 控制从页面顶部到 Logo+标题 的整体距离 */
 .hero.has-particles .hero-body {
-  padding-top: 1rem;  /* 想整体更靠下就调大这个值 */
+  padding-top: 2rem;  /* 想整体更靠下就调大这个值 */
 }
 
 /* 顶部 Logo+艺术字在移动端的适配，避免文字溢出 */
