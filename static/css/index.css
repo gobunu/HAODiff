@@ -2,6 +2,59 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+/* 自定义 HAODiff 艺术字字体 */
+@font-face {
+  font-family: 'HAODiffZapfino';
+  src: url('../images/Zapfino.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 顶部 Logo 区域（标题上方，与标题一起下移） */
+.haodiff-topbar {
+  margin-top: 0;        /* 不再用它来做全局顶部留白 */
+  margin-bottom: 2rem;  /* 只控制 Logo 与标题之间的间距 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.haodiff-topbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;   /* Logo 与文字的水平间距 */
+}
+
+.haodiff-logo {
+  height: 165px; /* Logo 高度，在这里放大/缩小 */
+  transform: translateY(-5px);  /* 这里控制 Logo 单独向上/向下 */
+}
+
+.haodiff-logo-night {
+  display: none;
+}
+
+body.dark-theme .haodiff-logo-day {
+  display: none;
+}
+
+body.dark-theme .haodiff-logo-night {
+  display: inline;
+}
+
+.haodiff-wordmark {
+  font-family: 'HAODiffZapfino', 'Noto Sans', sans-serif;
+  font-size: 2.4rem;   /* 文字大小在这里调整 */
+  letter-spacing: 0.18rem; /* 字间距在这里调整 */
+  font-weight: 700;
+  color: #215f9b;
+}
+
+body.dark-theme .haodiff-wordmark {
+  color: #4e78a1;
+}
+
 /* Top hero particle canvas */
 #hero-particles {
   position: absolute;
@@ -21,6 +74,11 @@ body {
 .hero.has-particles .container {
   position: relative;
   z-index: 1;
+}
+
+/* 控制从页面顶部到 Logo+标题 的整体距离 */
+.hero.has-particles .hero-body {
+  padding-top: 5rem;  /* 想整体更靠下就调大这个值 */
 }
 
 
