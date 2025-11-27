@@ -20,7 +20,7 @@ Xing Liu, Hong Gu,
 
 <p align="center">
   <a href="https://gobunu.github.io/HAODiff/">
-    <img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg">
+    <img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgobunu%2FHAODiff%2Fmain%2Fimages%2Fhaodiff_page_badge.json">
   </a>
   <a href="https://arxiv.org/abs/2505.19742">
     <img src="https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg">
