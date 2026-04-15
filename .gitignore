@@ -1,0 +1,6 @@
+preset
+preset/
+weights/
+outputs/
+*.pyc
+**/__pycache__/

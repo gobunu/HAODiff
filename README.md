@@ -47,6 +47,7 @@ Xing Liu, Hong Gu,
 
 #### 🔥🔥🔥 News
 
+- **2026-04-15**: Released the inference code and pretrained inference weights.
 - **2025-05-27:** This repo is released.
 - **2025-09-17**: 🎉 Congratulations! HAODiff has been accepted to **NeurIPS 2025**.
 - **2025-11-27**: 🧪 Released the test set **MPII-Test** proposed in the paper.
@@ -96,16 +97,61 @@ Xing Liu, Hong Gu,
 
 ## ⚒️ TODO
 
-* [ ] Release code and pretrained models
+* [x] Release inference code and pretrained weights
+* [ ] Release training code
 
 ## 🔗 Contents
 
-- [ ] Models
+- [x] [Inference](#inference)
+- [x] Models
 - [x] [Test Set](#testset)
 - [ ] Training
 - [x] [Results](#results)
 - [x] [Citation](#citation)
 - [ ] [Acknowledgements](#acknowledgements)
+
+## <a name="inference"></a>🚀 Inference
+
+This repository provides HAODiff inference code and pretrained weights.
+
+- The inference entry point is [run_inference.py](run_inference.py).
+- The pretrained inference weights can be downloaded from [Google Drive](https://drive.google.com/drive/folders/102V4pwrYhmQ7mfhZzDw7amRAf9LGChFt?usp=sharing).
+- If you download them manually, place the files under [weights](weights).
+
+### Environment Installation
+
+Install the Python dependencies:
+
+```bash
+conda create -n HAODiff python=3.11 -y
+conda activate HAODiff
+pip install -r requirements.txt
+```
+
+Prepare the required pretrained assets:
+
+```bash
+mkdir -p preset
+```
+
+Prepare a local `preset/` directory at the repository root and place the required base models there. At minimum, `preset/` should contain `stable-diffusion-2-1-base`.
+
+### Inference
+
+Run inference with the sample inputs:
+
+```bash
+python run_inference.py \
+  --input_image test_set \
+  --output_dir outputs \
+  --gpu_ids 0
+```
+
+## 📦 Pretrained Weights
+
+| Component | Description | Download Link |
+|----------|-------------|---------------|
+| HAODiff Inference Weights | Pretrained weights | [Google Drive](https://drive.google.com/drive/folders/102V4pwrYhmQ7mfhZzDw7amRAf9LGChFt?usp=sharing) |
 
 ## <a name="testset"></a>🔎 Test Set
 | Dataset           | Description                             | Download Link |
