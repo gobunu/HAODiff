@@ -549,7 +549,12 @@ def parse_args():
     parser.add_argument("--cfg_scale", type=float, default=1.0)
     parser.add_argument("--mixed_precision", type=str, choices=["fp16", "fp32"], default="fp32")
     parser.add_argument("--gpu_ids", nargs="+", type=int, default=[0], help="GPU IDs used for multiprocessing inference.")
-    parser.add_argument("--merge_lora", action="store_true", help="Merge LoRA weights into the UNet before inference.")
+    parser.add_argument(
+        "--merge_lora",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Merge LoRA weights into the UNet before inference.",
+    )
     parser.add_argument("--lora_rank", type=int, default=16)
     parser.add_argument("--lora_alpha", type=float, default=16)
     parser.add_argument("--vae_decoder_tiled_size", type=int, default=224)
