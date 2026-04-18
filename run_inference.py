@@ -546,7 +546,7 @@ def parse_args():
     parser.add_argument("--seed", type=int, default=114, help="Random seed.")
     parser.add_argument("--ckpt_path", type=str, default=str(DEFAULT_CKPT_PATH), help="Directory containing HAODiff weights.")
     parser.add_argument("--timesteps", type=int, default=199)
-    parser.add_argument("--cfg_scale", type=float, default=1.0)
+    parser.add_argument("--cfg_scale", type=float, default=3.5)
     parser.add_argument("--mixed_precision", type=str, choices=["fp16", "fp32"], default="fp32")
     parser.add_argument("--gpu_ids", nargs="+", type=int, default=[0], help="GPU IDs used for multiprocessing inference.")
     parser.add_argument(
